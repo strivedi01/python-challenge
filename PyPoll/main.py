@@ -30,6 +30,13 @@ with open(csvpath) as csvfile:
             tooley_count += 1
         else:
             li_count += 1
+
+    print("Election Results \n -----------------\n Total Votes: " + str(vote_count) + "\n-----------------")
+    
+    print("Khan: %.3f"%((khan_count/vote_count)*100) + "%" + "(%.0f)"% khan_count)
+    print("Correy: %.3f"%((correy_count/vote_count)*100) + "%" + "(%.0f)"% correy_count)
+    print("Li: %.3f"%((li_count/vote_count)*100) + "%" + "(%.0f)"% li_count)
+    print("O'Tooley: %.3f"%((tooley_count/vote_count)*100) + "%" + "(%.0f)"% tooley_count)
         
 output_file = os.path.join(".","analysis", "poll_output.txt")  
 f=open(output_file, "a")
